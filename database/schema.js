@@ -1,7 +1,5 @@
 const mongoose = require('mongoose');
-
-const db = require('./index.js');
-
+// const db = require('./index.js');
 mongoose.Promise = global.Promise;
 
 const homeSchema = new mongoose.Schema({
@@ -28,10 +26,7 @@ const activitySchema = new mongoose.Schema({
 });
 
 const Home = mongoose.model('Home', homeSchema);
-
 const Activity = mongoose.model('Activity', activitySchema);
 
-module.exports = {
-  Home,
-  Activity,
-};
+module.exports = Home;
+module.exports = Activity;
