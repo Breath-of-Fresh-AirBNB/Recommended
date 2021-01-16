@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 const mongoose = require('mongoose');
 const db = require('./index.js');
 
@@ -9,7 +10,7 @@ const homeSchema = new mongoose.Schema({
   destination: String,
   imageUrl: String,
   accommodation: String,
-  bed: Number,
+  beds: Number,
   reviews: Number,
   averageRating: Number,
   rate: Number,
