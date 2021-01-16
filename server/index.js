@@ -7,7 +7,7 @@ app.use(express.static('dist'));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 
-const port = 3001;
+const port = 2222;
 
 app.get('/', (req, res) => {
   res.send('got it');

@@ -1,5 +1,6 @@
 const faker = require('faker');
 const mongoose = require('mongoose');
+// const db = require('./index.js');
 const Home = require('./homeSchema.js');
 const Activity = require('./activitySchema.js');
 
@@ -80,9 +81,14 @@ const createSampleActivities = () => {
 const sampleHouses = createSampleHomes();
 const sampleActivities = createSampleActivities();
 
+// Home.create({homeId: 1, name: 'test'})
+//   .then(() => consoole.log('success'))
+//   .catch(err => console.log(err));
+
 const insertSamples = () => {
   Home.create(sampleHouses)
     .then(() => Activity.create(sampleActivities))
-    .then(() => mongoose.disconnect());
+    .then(() => mongoose.disconnect())
+    .catch((err) => console.log('error: ', err));
 };
 insertSamples();
