@@ -79,7 +79,6 @@ const createSampleActivities = () => {
 
 const sampleHouses = createSampleHomes();
 const sampleActivities = createSampleActivities();
-console.log(sampleActivities);
 
 const insertSamples = () => {
   Home.create(sampleHouses)
