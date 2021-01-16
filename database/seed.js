@@ -61,7 +61,7 @@ const createSampleActivities = () => {
 
     const city = cities[Math.floor(Math.random() * cities.length)];
 
-    const verbs = ['Discover', 'Explore', 'Tasting', 'Walking Tour of', 'The Nightlife of', 'Historic', 'Secrets of', 'Street of', 'The Best of'];
+    const verbs = ['Discover', 'Explore', 'Tasting', 'Walking Tour of', 'The Nightlife of', 'Historic', 'Secrets of', 'Street Art of', 'The Best of'];
 
     const newActivity = {
       activityId: i,
@@ -81,14 +81,11 @@ const createSampleActivities = () => {
 const sampleHouses = createSampleHomes();
 const sampleActivities = createSampleActivities();
 
-// Home.create({homeId: 1, name: 'test'})
-//   .then(() => consoole.log('success'))
-//   .catch(err => console.log(err));
-
 const insertSamples = () => {
   Home.create(sampleHouses)
     .then(() => Activity.create(sampleActivities))
     .then(() => mongoose.disconnect())
+    // eslint-disable-next-line no-console
     .catch((err) => console.log('error: ', err));
 };
 insertSamples();
