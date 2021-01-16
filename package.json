@@ -4,9 +4,9 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "jest",
-    "dev:server": "nodemon --exec babel-node server --ignore dist/",
-    "dev:bundler": "webpack -w --mode=development",
+    "test": "jest --collectCoverage",
+    "start": "nodemon --exec babel-node server --ignore dist/",
+    "build": "webpack -w",
     "seed": "node database/seed.js"
   },
   "repository": {
@@ -26,6 +26,8 @@
     "@babel/preset-env": "^7.12.11",
     "@babel/preset-react": "^7.12.10",
     "babel-loader": "^8.2.2",
+    "body-parser": "^1.19.0",
+    "eslint-plugin-jest": "^24.1.3",
     "express": "^4.17.1",
     "faker": "^5.1.0",
     "mongoose": "^5.11.12",
