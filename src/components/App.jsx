@@ -1,6 +1,6 @@
 import React from 'react';
 import axios from 'axios';
-import styled from 'styled-components';
+// import styled from 'styled-components';
 import PlacesToStay from './PlacesToStay';
 import sampleHomes from './sampleHomes';
 import sampleActivities from './sampleActivities';
