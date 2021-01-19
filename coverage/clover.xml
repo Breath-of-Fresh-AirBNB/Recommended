@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1610771433595" clover="3.2.0">
-  <project timestamp="1610771433595" name="All files">
+<coverage generated="1611013968463" clover="3.2.0">
+  <project timestamp="1611013968463" name="All files">
     <metrics statements="18" coveredstatements="16" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="0" elements="20" coveredelements="16" complexity="0" loc="18" ncloc="18" packages="1" files="3" classes="3"/>
     <file name="activitySchema.js" path="/Users/paulaherrera/HackReactor/FEC/recommended/database/activitySchema.js">
       <metrics statements="5" coveredstatements="5" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
