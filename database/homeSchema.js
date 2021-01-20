@@ -9,12 +9,12 @@ const homeSchema = new mongoose.Schema({
   name: String,
   destination: String,
   imageUrl: String,
-  accommodation: String,
+  accommodationType: String,
   beds: Number,
   reviews: Number,
   averageRating: Number,
   rate: Number,
-  related: [String],
+  relatedDestinations: [String],
 });
 
 const Home = mongoose.model('Home', homeSchema);
