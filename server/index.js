@@ -15,10 +15,16 @@ app.get('/', (req, res) => {
   res.send('got it');
 });
 
-app.get('/homes', (req, res) => {
-  Home.find({})
-    .then((homes) => {
-      res.status(200).send(homes);
+app.get('/homes/:id', (req, res) => {
+  Home.find({ homeId: req.params.id })
+    .then((home) => {
+      Home.find({ destination: home[0].destination })
+        .then((homes) => {
+          res.status(200).send(homes);
+        })
+        .catch((err) => {
+          res.status(500).send(err);
+        });
     })
     .catch((err) => {
       res.status(500).send(err);
