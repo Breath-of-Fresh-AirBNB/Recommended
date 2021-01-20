@@ -24,7 +24,7 @@ class App extends React.Component {
   }
 
   componentDidMount() {
-    axios.get('http://localhost:2222/homes')
+    axios.get('http://localhost:2222/homes/4')
       .then((homes) => {
         const listings = [];
         for (let i = 0; i <= 11; i += 1) {

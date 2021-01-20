@@ -18,7 +18,7 @@ app.get('/', (req, res) => {
 app.get('/homes/:id', (req, res) => {
   Home.find({ homeId: req.params.id })
     .then((home) => {
-      Home.find({ destination: home[0].destination})
+      Home.find({ destination: home[0].destination })
         .then((homes) => {
           res.status(200).send(homes);
         })
