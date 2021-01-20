@@ -31,10 +31,16 @@ app.get('/homes/:id', (req, res) => {
     });
 });
 
-app.get('/activities', (req, res) => {
-  Activity.find({})
-    .then((homes) => {
-      res.status(200).send(homes);
+app.get('/activities/:id', (req, res) => {
+  Home.find({ homeId: req.params.id })
+    .then((home) => {
+      Activity.find({ destination: home[0].destination })
+        .then((activities) => {
+          res.status(200).send(activities);
+        })
+        .catch((err) => {
+          res.status(500).send(err);
+        });
     })
     .catch((err) => {
       res.status(500).send(err);
