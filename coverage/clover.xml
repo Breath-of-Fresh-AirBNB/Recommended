@@ -1,33 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1611110092280" clover="3.2.0">
-  <project timestamp="1611110092280" name="All files">
-    <metrics statements="18" coveredstatements="16" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="0" elements="20" coveredelements="16" complexity="0" loc="18" ncloc="18" packages="1" files="3" classes="3"/>
-    <file name="activitySchema.js" path="/Users/paulaherrera/HackReactor/FEC/recommended/database/activitySchema.js">
-      <metrics statements="5" coveredstatements="5" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
-      <line num="1" count="1" type="stmt"/>
-      <line num="3" count="1" type="stmt"/>
-      <line num="5" count="1" type="stmt"/>
-      <line num="15" count="1" type="stmt"/>
-      <line num="17" count="1" type="stmt"/>
-    </file>
-    <file name="homeSchema.js" path="/Users/paulaherrera/HackReactor/FEC/recommended/database/homeSchema.js">
-      <metrics statements="6" coveredstatements="6" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
-      <line num="2" count="1" type="stmt"/>
-      <line num="3" count="1" type="stmt"/>
-      <line num="5" count="1" type="stmt"/>
-      <line num="7" count="1" type="stmt"/>
-      <line num="20" count="1" type="stmt"/>
-      <line num="22" count="1" type="stmt"/>
-    </file>
-    <file name="index.js" path="/Users/paulaherrera/HackReactor/FEC/recommended/database/index.js">
-      <metrics statements="7" coveredstatements="5" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="0"/>
-      <line num="2" count="1" type="stmt"/>
-      <line num="4" count="1" type="stmt"/>
-      <line num="6" count="1" type="stmt"/>
-      <line num="8" count="1" type="stmt"/>
-      <line num="9" count="0" type="stmt"/>
-      <line num="10" count="0" type="stmt"/>
-      <line num="12" count="1" type="stmt"/>
-    </file>
+<coverage generated="1611176230751" clover="3.2.0">
+  <project timestamp="1611176230751" name="All files">
+    <metrics statements="0" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0" elements="0" coveredelements="0" complexity="0" loc="0" ncloc="0" packages="0" files="0" classes="0"/>
   </project>
 </coverage>
