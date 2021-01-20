@@ -26,7 +26,9 @@ jobs:
       # The orb install-packages step will also automatically cache them for faster future runs.
       - node/install-packages
 
-      - npm run seed
+      - run:
+          name: Run seed
+          command: npm run seed
       # If you are using yarn instead npm, remove the line above and uncomment the two lines below.
       # - node/install-packages:
       #     pkg-manager: yarn
