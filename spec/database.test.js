@@ -1,5 +1,4 @@
 const mongoose = require('mongoose');
-const db = require('../database/index.js');
 const Home = require('../database/homeSchema.js');
 const Activity = require('../database/activitySchema.js');
 
