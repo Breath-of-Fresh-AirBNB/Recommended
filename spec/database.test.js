@@ -1,5 +1,5 @@
 const mongoose = require('mongoose');
-const db = require('../database/index.js');
+// const db = require('../database/index.js');
 const Home = require('../database/homeSchema.js');
 const Activity = require('../database/activitySchema.js');
 
@@ -70,4 +70,9 @@ describe('Database Seeding', () => {
         expect(activities).toHaveLength(100);
       });
   });
+});
+
+afterAll((done) => {
+  mongoose.connection.close();
+  done();
 });
