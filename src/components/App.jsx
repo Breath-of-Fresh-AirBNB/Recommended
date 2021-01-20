@@ -3,6 +3,7 @@ import axios from 'axios';
 import styled from 'styled-components';
 import PlacesToStay from './PlacesToStay';
 import ThingsToDo from './ThingsToDo';
+import ExploreOtherOptions from './ExploreOtherOptions';
 import sampleHomes from './sampleHomes';
 import sampleActivities from './sampleActivities';
 
@@ -20,7 +21,7 @@ class App extends React.Component {
     this.state = {
       homes: sampleHomes,
       activities: sampleActivities,
-      // destinations: sampleHomes[0],
+      destinations: sampleHomes[0].relatedDestinations,
     };
   }
 
@@ -48,7 +49,7 @@ class App extends React.Component {
   }
 
   render() {
-    const { homes, activities } = this.state;
+    const { homes, activities, destinations } = this.state;
     return (
       <Container>
         <PlacesToStay
@@ -56,6 +57,9 @@ class App extends React.Component {
         />
         <ThingsToDo
           activities={activities}
+        />
+        <ExploreOtherOptions
+          destinations={destinations}
         />
       </Container>
     );
