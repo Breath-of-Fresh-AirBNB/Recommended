@@ -3,14 +3,6 @@ const mongoose = require('mongoose');
 const Home = require('../database/homeSchema.js');
 const Activity = require('../database/activitySchema.js');
 
-const mongoUrl = 'mongodb://localhost/reviews';
-
-beforeAll(() => {
-  mongoose.connect(mongoUrl, { useNewUrlParser: true, useUnifiedTopology: true });
-});
-
-
-
 describe('Database Seeding', () => {
   test('Should have 100 home records', () => {
     Home.find({})
