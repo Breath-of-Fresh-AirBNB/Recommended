@@ -6,13 +6,13 @@ describe('GET /homes/:id', () => {
   test('It should respond with array', async () => {
     const response = await request(app).get('/homes/4');
     const homes = response.body;
-    expect(Array.isArray(homes)).toBe(true);
+    expect(Array.isArray(homes)).toBeTruthy();
     expect(response.statusCode).toBe(200);
   });
   test('It should respond with array of homes', async () => {
     const response = await request(app).get('/homes/4');
     const homes = response.body;
-    expect(Array.isArray(homes)).toBe(true);
+    expect(Array.isArray(homes)).toBeTruthy();
     expect(homes[0]).toHaveProperty('homeId');
     expect(response.statusCode).toBe(200);
   });
@@ -26,13 +26,13 @@ describe('GET /activities/:id', () => {
   test('It should respond with array', async () => {
     const response = await request(app).get('/activities/4');
     const activities = response.body;
-    expect(Array.isArray(activities)).toBe(true);
+    expect(Array.isArray(activities)).toBeTruthy();
     expect(response.statusCode).toBe(200);
   });
   test('It should respond with array of activities', async () => {
     const response = await request(app).get('/activities/4');
     const activities = response.body;
-    expect(Array.isArray(activities)).toBe(true);
+    expect(Array.isArray(activities)).toBeTruthy();
     expect(activities[0]).toHaveProperty('activityId');
     expect(response.statusCode).toBe(200);
   });
