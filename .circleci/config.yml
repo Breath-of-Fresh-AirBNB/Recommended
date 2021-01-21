@@ -5,8 +5,11 @@ orbs:
 jobs:
   build-and-test:
     docker:
-      - image: cimg/node:15.1
-      - image: circleci/mongodb:latest
+      - image: circleci/node
+      - image: circleci/mongodb:4.1.9
+        auth:
+          username: student
+          password: student
     steps:
       - checkout
       - node/install-packages
