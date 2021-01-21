@@ -20,31 +20,33 @@ const ActivityListing = ({ activity }) => {
   const classes = useStyles();
 
   return (
-    <Card className={classes.root}>
-      <CardActionArea>
-        <CardMedia
-          className={classes.media}
-          image={activity.imageUrl}
-          title={activity.name}
-        />
-        <CardContent>
-          <Typography variant="body2" color="initial" component="p">
-            {activity.reviews}
-            {' '}
-            reviews
-          </Typography>
-          <Typography variant="body2" color="initial" component="p">
-            {activity.name}
-          </Typography>
-          <Typography variant="body2" color="initial" component="p">
-            From $
-            {activity.rate}
-            {' '}
-            / person
-          </Typography>
-        </CardContent>
-      </CardActionArea>
-    </Card>
+    <div className="activityListing">
+      <Card className={classes.root}>
+        <CardActionArea>
+          <CardMedia
+            className={classes.media}
+            image={activity.imageUrl}
+            title={activity.name}
+          />
+          <CardContent>
+            <Typography variant="body2" color="initial" component="p">
+              {activity.reviews}
+              {' '}
+              reviews
+            </Typography>
+            <Typography variant="body2" color="initial" component="p">
+              {activity.name}
+            </Typography>
+            <Typography variant="body2" color="initial" component="p">
+              From $
+              {activity.rate}
+              {' '}
+              / person
+            </Typography>
+          </CardContent>
+        </CardActionArea>
+      </Card>
+    </div>
   );
 };
 

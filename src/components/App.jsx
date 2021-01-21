@@ -51,17 +51,19 @@ class App extends React.Component {
   render() {
     const { homes, activities, destinations } = this.state;
     return (
-      <Container>
-        <PlacesToStay
-          homes={homes}
-        />
-        <ThingsToDo
-          activities={activities}
-        />
-        <ExploreOtherOptions
-          destinations={destinations}
-        />
-      </Container>
+      <div className="recommended">
+        <Container>
+          <PlacesToStay
+            homes={homes}
+          />
+          <ThingsToDo
+            activities={activities}
+          />
+          <ExploreOtherOptions
+            destinations={destinations}
+          />
+        </Container>
+      </div>
     );
   }
 }

@@ -57,8 +57,8 @@ class ThingsToDo extends React.Component {
         <div className="top-bar">
           <Title>Things to do nearby</Title>
           <Buttons>
-            <button type="button" onClick={() => this.carousel.slidePrev()}>{prev}</button>
-            <button type="button" onClick={() => this.carousel.slideNext()}>{next}</button>
+            <button type="button" className="prevBtn" onClick={() => this.carousel.slidePrev()}>{prev}</button>
+            <button type="button" className="nextBtn" onClick={() => this.carousel.slideNext()}>{next}</button>
           </Buttons>
         </div>
         <CarouselContainer>

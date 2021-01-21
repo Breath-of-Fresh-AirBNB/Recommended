@@ -20,40 +20,42 @@ const HomeListing = ({ home }) => {
   const classes = useStyles();
 
   return (
-    <Card className={classes.root}>
-      <CardActionArea>
-        <CardMedia
-          className={classes.media}
-          image={home.imageUrl}
-          title={home.name}
-        />
-        <CardContent>
-          <Typography variant="body2" color="initial" component="p">
-            {home.reviews}
-            {' '}
-            reviews
-          </Typography>
-          <Typography variant="body2" color="initial" component="p">
-            {home.accommodationType}
-            {' '}
-            •
-            {' '}
-            {home.beds}
-            {' '}
-            beds
-          </Typography>
-          <Typography variant="body2" color="initial" component="p">
-            {home.name}
-          </Typography>
-          <Typography variant="body2" color="initial" component="p">
-            $
-            {home.rate}
-            {' '}
-            / night
-          </Typography>
-        </CardContent>
-      </CardActionArea>
-    </Card>
+    <div className="homeListing">
+      <Card className={classes.root}>
+        <CardActionArea>
+          <CardMedia
+            className={classes.media}
+            image={home.imageUrl}
+            title={home.name}
+          />
+          <CardContent>
+            <Typography variant="body2" color="initial" component="p">
+              {home.reviews}
+              {' '}
+              reviews
+            </Typography>
+            <Typography variant="body2" color="initial" component="p">
+              {home.accommodationType}
+              {' '}
+              •
+              {' '}
+              {home.beds}
+              {' '}
+              beds
+            </Typography>
+            <Typography variant="body2" color="initial" component="p">
+              {home.name}
+            </Typography>
+            <Typography variant="body2" color="initial" component="p">
+              $
+              {home.rate}
+              {' '}
+              / night
+            </Typography>
+          </CardContent>
+        </CardActionArea>
+      </Card>
+    </div>
   );
 };
 
