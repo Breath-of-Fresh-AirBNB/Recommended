@@ -20,45 +20,47 @@ const Destinations = styled.div`
 `;
 
 const ExploreOtherOptions = ({ destinations }) => (
-  <Explore>
-    <Title>Explore other options in and around Paris</Title>
-    <p>
-      More places to stay in Paris:
-      <br />
-      Houses • Bed and breakfasts • Lofts • Villas • Condominiums
-      <br />
-      <Destinations>
-        <div>
-          {destinations[0]}
-          <br />
-          {destinations[1]}
-          <br />
-          {destinations[2]}
-        </div>
-        <div>
-          {destinations[3]}
-          <br />
-          {destinations[4]}
-          <br />
-          {destinations[5]}
-        </div>
-        <div>
-          {destinations[6]}
-          <br />
-          {destinations[7]}
-          <br />
-          {destinations[8]}
-        </div>
-        <div>
-          {destinations[9]}
-          <br />
-          {destinations[10]}
-          <br />
-          {destinations[11]}
-        </div>
-      </Destinations>
-    </p>
-  </Explore>
+  <div className="exploreOtherOptions">
+    <Explore>
+      <Title>Explore other options in and around Paris</Title>
+      <p>
+        More places to stay in Paris:
+        <br />
+        Houses • Bed and breakfasts • Lofts • Villas • Condominiums
+        <br />
+        <Destinations>
+          <div>
+            {destinations[0]}
+            <br />
+            {destinations[1]}
+            <br />
+            {destinations[2]}
+          </div>
+          <div>
+            {destinations[3]}
+            <br />
+            {destinations[4]}
+            <br />
+            {destinations[5]}
+          </div>
+          <div>
+            {destinations[6]}
+            <br />
+            {destinations[7]}
+            <br />
+            {destinations[8]}
+          </div>
+          <div>
+            {destinations[9]}
+            <br />
+            {destinations[10]}
+            <br />
+            {destinations[11]}
+          </div>
+        </Destinations>
+      </p>
+    </Explore>
+  </div>
 );
 
 export default ExploreOtherOptions;

@@ -23,9 +23,9 @@
         <div class='clearfix'>
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">80% </span>
+                <span class="strong">100% </span>
                 <span class="quiet">Statements</span>
-                <span class='fraction'>4/5</span>
+                <span class='fraction'>5/5</span>
             </div>
         
             
@@ -37,16 +37,16 @@
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">0% </span>
+                <span class="strong">100% </span>
                 <span class="quiet">Functions</span>
-                <span class='fraction'>0/1</span>
+                <span class='fraction'>1/1</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">80% </span>
+                <span class="strong">100% </span>
                 <span class="quiet">Lines</span>
-                <span class='fraction'>4/5</span>
+                <span class='fraction'>5/5</span>
             </div>
         
             
@@ -121,7 +121,9 @@
 <a name='L62'></a><a href='#L62'>62</a>
 <a name='L63'></a><a href='#L63'>63</a>
 <a name='L64'></a><a href='#L64'>64</a>
-<a name='L65'></a><a href='#L65'>65</a></td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
+<a name='L65'></a><a href='#L65'>65</a>
+<a name='L66'></a><a href='#L66'>66</a>
+<a name='L67'></a><a href='#L67'>67</a></td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -143,7 +145,9 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -206,46 +210,48 @@ const Destinations = styled.div`
 &nbsp;
 `;
 &nbsp;
-const ExploreOtherOptions = <span class="fstat-no" title="function not covered" >({</span> destinations }) =&gt; (
-<span class="cstat-no" title="statement not covered" >  &lt;Explore&gt;</span>
-    &lt;Title&gt;Explore other options in and around Paris&lt;/Title&gt;
-    &lt;p&gt;
-      More places to stay in Paris:
-      &lt;br /&gt;
-      Houses • Bed and breakfasts • Lofts • Villas • Condominiums
-      &lt;br /&gt;
-      &lt;Destinations&gt;
-        &lt;div&gt;
-          {destinations[0]}
-          &lt;br /&gt;
-          {destinations[1]}
-          &lt;br /&gt;
-          {destinations[2]}
-        &lt;/div&gt;
-        &lt;div&gt;
-          {destinations[3]}
-          &lt;br /&gt;
-          {destinations[4]}
-          &lt;br /&gt;
-          {destinations[5]}
-        &lt;/div&gt;
-        &lt;div&gt;
-          {destinations[6]}
-          &lt;br /&gt;
-          {destinations[7]}
-          &lt;br /&gt;
-          {destinations[8]}
-        &lt;/div&gt;
-        &lt;div&gt;
-          {destinations[9]}
-          &lt;br /&gt;
-          {destinations[10]}
-          &lt;br /&gt;
-          {destinations[11]}
-        &lt;/div&gt;
-      &lt;/Destinations&gt;
-    &lt;/p&gt;
-  &lt;/Explore&gt;
+const ExploreOtherOptions = ({ destinations }) =&gt; (
+  &lt;div className="exploreOtherOptions"&gt;
+    &lt;Explore&gt;
+      &lt;Title&gt;Explore other options in and around Paris&lt;/Title&gt;
+      &lt;p&gt;
+        More places to stay in Paris:
+        &lt;br /&gt;
+        Houses • Bed and breakfasts • Lofts • Villas • Condominiums
+        &lt;br /&gt;
+        &lt;Destinations&gt;
+          &lt;div&gt;
+            {destinations[0]}
+            &lt;br /&gt;
+            {destinations[1]}
+            &lt;br /&gt;
+            {destinations[2]}
+          &lt;/div&gt;
+          &lt;div&gt;
+            {destinations[3]}
+            &lt;br /&gt;
+            {destinations[4]}
+            &lt;br /&gt;
+            {destinations[5]}
+          &lt;/div&gt;
+          &lt;div&gt;
+            {destinations[6]}
+            &lt;br /&gt;
+            {destinations[7]}
+            &lt;br /&gt;
+            {destinations[8]}
+          &lt;/div&gt;
+          &lt;div&gt;
+            {destinations[9]}
+            &lt;br /&gt;
+            {destinations[10]}
+            &lt;br /&gt;
+            {destinations[11]}
+          &lt;/div&gt;
+        &lt;/Destinations&gt;
+      &lt;/p&gt;
+    &lt;/Explore&gt;
+  &lt;/div&gt;
 );
 &nbsp;
 export default ExploreOtherOptions;
@@ -256,7 +262,7 @@ export default ExploreOtherOptions;
             <div class='footer quiet pad2 space-top1 center small'>
                 Code coverage generated by
                 <a href="https://istanbul.js.org/" target="_blank">istanbul</a>
-                at Wed Jan 20 2021 19:31:06 GMT-0700 (Mountain Standard Time)
+                at Wed Jan 20 2021 20:41:27 GMT-0700 (Mountain Standard Time)
             </div>
         </div>
         <script src="../../prettify.js"></script>

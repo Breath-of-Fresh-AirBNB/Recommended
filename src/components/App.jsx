@@ -28,20 +28,14 @@ class App extends React.Component {
   componentDidMount() {
     axios.get('http://localhost:2222/homes/4')
       .then((homes) => {
-        const listings = [];
-        for (let i = 0; i <= 11; i += 1) {
-          listings.push(homes.data[i]);
-        }
+        const listings = homes.data.slice(0, 12);
         this.setState({
           homes: listings,
         });
       });
     axios.get('http://localhost:2222/activities/4')
       .then((activities) => {
-        const activitiesList = [];
-        for (let i = 0; i <= 11; i += 1) {
-          activitiesList.push(activities.data[i]);
-        }
+        const activitiesList = activities.data.slice(0, 12);
         this.setState({
           activities: activitiesList,
         });

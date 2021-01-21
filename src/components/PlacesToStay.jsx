@@ -57,7 +57,7 @@ class PlacesToStay extends React.Component {
         <div className="top-bar">
           <Title>More places to stay</Title>
           <Buttons>
-            <button type="button" onClick={() => this.carousel.slidePrev()}>{prev}</button>
+            <button type="button" className="prevBtn" onClick={() => this.carousel.slidePrev()}>{prev}</button>
             <button type="button" onClick={() => this.carousel.slideNext()}>{next}</button>
           </Buttons>
         </div>

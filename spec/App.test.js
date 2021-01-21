@@ -10,17 +10,18 @@ import PlacesToStay from '../src/components/PlacesToStay';
 import ThingsToDo from '../src/components/ThingsToDo';
 import ActivityListing from '../src/components/ActivityListing';
 import HomeListing from '../src/components/HomeListing';
+import ExploreOtherOptions from '../src/components/ExploreOtherOptions';
 
 Enzyme.configure({ adapter: new Adapter() });
 
-describe('Component Rendering', () => {
+describe('App component Rendering', () => {
   it('should render App without throwing an error', () => {
     expect(shallow(<App />).is('.recommended')).toBe(true);
   });
 
   it('calls componentDidMount()', () => {
     jest.spyOn(App.prototype, 'componentDidMount');
-    const wrapper = shallow(<App />);
+    shallow(<App />);
     expect(App.prototype.componentDidMount.mock.calls.length).toBe(1);
   });
 });
@@ -29,6 +30,14 @@ describe('Carousel components Rendering', () => {
   it('should render PlacesToStay without throwing an error', () => {
     PlacesToStay.defaultProps = { homes: [] };
     expect(shallow(<PlacesToStay />).is('.morePlacesToStay')).toBe(true);
+  });
+
+  it('should click', () => {
+    PlacesToStay.defaultProps = { carousel: [], homes: [] };
+    const clickCallback = sinon.spy();
+    const actualNode = shallow(<PlacesToStay onClick={clickCallback} />);
+    actualNode.find('.prevBtn').simulate('click');
+    sinon.assert.called(clickCallback);
   });
 
   it('should render HomeListing without throwing an error', () => {
@@ -44,5 +53,12 @@ describe('Carousel components Rendering', () => {
   it('should render ActivityListing without throwing an error', () => {
     ActivityListing.defaultProps = { activity: {} };
     expect(shallow(<ActivityListing />).is('.activityListing')).toBe(true);
+  });
+});
+
+describe('ExploreOtherOptions components Rendering', () => {
+  it('should render ExploreOtherOptions without throwing an error', () => {
+    ExploreOtherOptions.defaultProps = { destinations: [] };
+    expect(shallow(<ExploreOtherOptions />).is('.exploreOtherOptions')).toBe(true);
   });
 });
