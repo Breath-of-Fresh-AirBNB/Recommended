@@ -2,8 +2,9 @@ import React from 'react';
 import axios from 'axios';
 import styled from 'styled-components';
 import PlacesToStay from './PlacesToStay';
+import ThingsToDo from './ThingsToDo';
 import sampleHomes from './sampleHomes';
-// import sampleActivities from './sampleActivities';
+import sampleActivities from './sampleActivities';
 
 const Container = styled.div`
   display: flex;
@@ -18,7 +19,7 @@ class App extends React.Component {
     super();
     this.state = {
       homes: sampleHomes,
-      // activities: sampleActivities,
+      activities: sampleActivities,
       // destinations: sampleHomes[0],
     };
   }
@@ -34,14 +35,27 @@ class App extends React.Component {
           homes: listings,
         });
       });
+    axios.get('http://localhost:2222/activities/4')
+      .then((activities) => {
+        const activitiesList = [];
+        for (let i = 0; i <= 11; i += 1) {
+          activitiesList.push(activities.data[i]);
+        }
+        this.setState({
+          activities: activitiesList,
+        });
+      });
   }
 
   render() {
-    const { homes } = this.state;
+    const { homes, activities } = this.state;
     return (
       <Container>
         <PlacesToStay
           homes={homes}
+        />
+        <ThingsToDo
+          activities={activities}
         />
       </Container>
     );
