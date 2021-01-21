@@ -22,7 +22,7 @@ describe('App component Rendering', () => {
   it('calls componentDidMount()', () => {
     jest.spyOn(App.prototype, 'componentDidMount');
     shallow(<App />);
-    expect(App.prototype.componentDidMount.mock.calls.length).toBe(1);
+    expect(App.prototype.componentDidMount.mock.calls.length).toHaveLength(1);
   });
 });
 
