@@ -24,12 +24,14 @@ const Buttons = styled.div`
     margin: 5px;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     border: none;
+    outline: none;
   }
 
   & button:hover {
     height: 32px;
     width: 32px;
     margin: 3px;
+    margin-left: 5px;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.25);
   }
 `;
@@ -59,7 +61,7 @@ class PlacesToStay extends React.Component {
 
         </div>
         <CarouselContainer>
-        <Buttons>
+          <Buttons>
             <button type="button" id="prevBtn" onClick={() => this.carousel.slidePrev()}>{prev}</button>
             <button type="button" id="nextBtn" onClick={() => this.carousel.slideNext()}>{next}</button>
           </Buttons>
