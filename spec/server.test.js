@@ -2,8 +2,8 @@ const request = require('supertest');
 const mongoose = require('mongoose');
 const app = require('../server/app');
 
-beforeAll(() => {
-
+beforeAll(async () => {
+  await mongoose.connect('mongodb://localhost/airbnb', { useNewUrlParser: true, useUnifiedTopology: true });
 });
 
 describe('GET /homes/:id', () => {
