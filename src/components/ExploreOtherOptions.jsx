@@ -6,17 +6,15 @@ const Container = styled.div`
   width: 75%;
   padding: 50px 100px 0 100px;
   margin: 60px auto 20px auto;
-  border-top: 1px solid grey;
+  border-top: 1px solid #DDDDDD;
 
   & .subheader {
     margin-left: 10px;
-    font-family: Montserrat, sans-serif;
     font-size: 16px;
   }
 
   & .homeTypeLinks {
     margin-left: 10px;
-    font-family: Montserrat, sans-serif;
     color: grey;
     :hover {
       cursor: pointer;
@@ -29,7 +27,6 @@ const Title = styled.h2`
   font-size: 1.5em;
   font-weight: bold;
   color: #222222;
-  font-family: Montserrat, sans-serif;
   margin-left: 10px;
 `;
 
@@ -118,45 +115,3 @@ const ExploreOtherOptions = ({ destination, destinations }) => (
 );
 
 export default ExploreOtherOptions;
-
-// const ExploreOtherOptions = ({ destinations }) => (
-//   <Container>
-//     <Title>Explore other options in and around Paris</Title>
-//     <p>
-//       More places to stay in Paris:
-//       <br />
-//       Houses • Bed and breakfasts • Lofts • Villas • Condominiums
-//       <br />
-//       <Destinations>
-//         <div>
-//           {destinations[0]}
-//           <br />
-//           {destinations[1]}
-//           <br />
-//           {destinations[2]}
-//         </div>
-//         <div>
-//           {destinations[3]}
-//           <br />
-//           {destinations[4]}
-//           <br />
-//           {destinations[5]}
-//         </div>
-//         <div>
-//           {destinations[6]}
-//           <br />
-//           {destinations[7]}
-//           <br />
-//           {destinations[8]}
-//         </div>
-//         <div>
-//           {destinations[9]}
-//           <br />
-//           {destinations[10]}
-//           <br />
-//           {destinations[11]}
-//         </div>
-//       </Destinations>
-//     </p>
-//   </Container>
-// );

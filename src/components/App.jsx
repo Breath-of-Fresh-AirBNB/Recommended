@@ -6,14 +6,12 @@ import ThingsToDo from './ThingsToDo';
 import ExploreOtherOptions from './ExploreOtherOptions';
 import sampleHomes from './sampleHomes';
 import sampleActivities from './sampleActivities';
+import GlobalStyle from './globalStyle';
 
 const Container = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: center;
-  width: 100%;
-  font-family: Montserrat, sans-serif;
-  background-color: #F7F7F7;
 `;
 
 class App extends React.Component {
@@ -49,6 +47,7 @@ class App extends React.Component {
     const { homes, activities, destinations } = this.state;
     return (
       <Container>
+        <GlobalStyle />
         <PlacesToStay
           homes={homes}
         />
