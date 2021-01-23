@@ -5,7 +5,7 @@ import styled from 'styled-components';
 const Container = styled.div`
   width: 75%;
   padding: 50px 100px 0 100px;
-  margin: 60px 0 50px 0;
+  margin: 60px auto 20px auto;
   border-top: 1px solid grey;
 
   & .subheader {
@@ -51,11 +51,18 @@ const DestinationLink = styled.p`
   }
 `;
 
-const ExploreOtherOptions = ({ destinations }) => (
+const ExploreOtherOptions = ({ destination, destinations }) => (
   <Container>
-    <Title>Explore other options in and around Paris</Title>
+    <Title>
+      Explore other options in and around
+      {' '}
+      {destination}
+    </Title>
     <div className="subheader">
-      More places to stay in Paris:
+      More places to stay in
+      {' '}
+      {destination}
+      :
     </div>
     <div className="homeTypeLinks">
       Houses • Bed and breakfasts • Lofts • Villas • Condominiums

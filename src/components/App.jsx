@@ -12,7 +12,6 @@ const Container = styled.div`
   flex-direction: column;
   justify-content: center;
   width: 100%;
-  padding: 0 80px 0 80px;
   font-family: Montserrat, sans-serif;
   background-color: #F7F7F7;
 `;
@@ -47,19 +46,18 @@ class App extends React.Component {
   render() {
     const { homes, activities, destinations } = this.state;
     return (
-      <div className="recommended">
-        <Container>
-          <PlacesToStay
-            homes={homes}
-          />
-          <ThingsToDo
-            activities={activities}
-          />
-          <ExploreOtherOptions
-            destinations={destinations}
-          />
-        </Container>
-      </div>
+      <Container>
+        <PlacesToStay
+          homes={homes}
+        />
+        <ThingsToDo
+          activities={activities}
+        />
+        <ExploreOtherOptions
+          destination={homes[0].destination}
+          destinations={destinations}
+        />
+      </Container>
     );
   }
 }

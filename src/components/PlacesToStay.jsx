@@ -8,7 +8,7 @@ const Container = styled.div`
   width: 75%;
   padding: 0 100px 0 100px;
   font-family: Montserrat, sans-serif;
-  margin: 60px 0 50px 0;;
+  margin: 60px auto 30px auto;
 `;
 
 const Header = styled.div`
