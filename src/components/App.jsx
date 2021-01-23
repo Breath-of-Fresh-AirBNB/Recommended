@@ -20,6 +20,7 @@ class App extends React.Component {
   constructor() {
     super();
     this.state = {
+      id: 4,
       homes: sampleHomes,
       activities: sampleActivities,
       destinations: sampleHomes[0].relatedDestinations,
@@ -27,7 +28,8 @@ class App extends React.Component {
   }
 
   componentDidMount() {
-    axios.get('http://localhost:2222/homes/4')
+    const { id } = this.state;
+    axios.get(`http://localhost:2222/homes/${id}`)
       .then((homes) => {
         const listings = homes.data.slice(0, 12);
         this.setState({
@@ -36,7 +38,7 @@ class App extends React.Component {
       });
     axios.get('http://localhost:2222/activities/4')
       .then((activities) => {
-        const activitiesList = activities.data.slice(0, 12);
+        const activitiesList = activities.data;
         this.setState({
           activities: activitiesList,
         });

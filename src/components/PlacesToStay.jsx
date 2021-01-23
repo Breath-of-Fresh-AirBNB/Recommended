@@ -3,6 +3,7 @@ import React from 'react';
 import styled from 'styled-components';
 import Carousel from 'react-elastic-carousel';
 import HomeListing from './HomeListing';
+import PlacesCarousel from './PlacesCarousel';
 
 const Container = styled.div`
   width: 75%;
@@ -74,23 +75,7 @@ class PlacesToStay extends React.Component {
             <button type="button" id="nextBtn" onClick={() => this.carousel.slideNext()}>{next}</button>
           </Buttons>
         </Header>
-        <Carousel
-          ref={(ref) => { this.carousel = ref; }}
-          itemsToShow={4}
-          itemsToScroll={4}
-          pagination={false}
-          disableArrowsOnEnd={false}
-          showArrows={false}
-        >
-          {homes.map((home) => (
-            <item>
-              <HomeListing
-                home={home}
-                key={home.homeId}
-              />
-            </item>
-          ))}
-        </Carousel>
+        <PlacesCarousel homes={homes} />
       </Container>
     );
   }
