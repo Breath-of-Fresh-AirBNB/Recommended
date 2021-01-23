@@ -4,16 +4,30 @@ import styled from 'styled-components';
 import Carousel from 'react-elastic-carousel';
 import ActivityListing from './ActivityListing';
 
+const Container = styled.div`
+  width: 75%;
+  padding: 0 100px 0 100px;
+  font-family: Montserrat, sans-serif;
+  margin: 60px 0 50px 0;;
+`;
+
+const Header = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+`;
+
 const Title = styled.h2`
   display: block;
   font-size: 1.5em;
   font-weight: bold;
-  color: rgb(34, 34, 34);
-  font-family: Circular, -apple-system, BlinkMacSystemFont, Roboto, 'Helvetica Neue', sans-serif;
+  color: #222222;
+  font-family: Montserrat, sans-serif;
+  margin-left: 10px;
 `;
 
 const Buttons = styled.div`
-  float: right;
+  margin-right: 10px;
 
   & button {
     background: white;
@@ -22,6 +36,7 @@ const Buttons = styled.div`
     border-radius: 50%;
     display: inline-block;
     margin: 5px;
+    margin-bottom: 10px;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     border: none;
     outline: none;
@@ -33,13 +48,6 @@ const Buttons = styled.div`
     margin: 3px;
     margin-left: 5px;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.25);
-  }
-`;
-
-const CarouselContainer = styled.div`
-  &.MuiPaper.root {
-    width: 278px;
-    height: 267px;
   }
 `;
 
@@ -55,32 +63,32 @@ class ThingsToDo extends React.Component {
   render() {
     const { activities } = this.props;
     return (
-      <div className="thingsToDoNearby">
-        <div className="top-bar">
-          <Title>Things to do nearby</Title>
+      <Container>
+        <Header>
+          <div className="top-bar">
+            <Title>Things to do nearby</Title>
+          </div>
           <Buttons>
             <button type="button" className="prevBtn" onClick={() => this.carousel.slidePrev()}>{prev}</button>
             <button type="button" className="nextBtn" onClick={() => this.carousel.slideNext()}>{next}</button>
           </Buttons>
-        </div>
-        <CarouselContainer>
-          <Carousel
-            ref={(ref) => { this.carousel = ref; }}
-            itemsToShow={4}
-            itemsToScroll={4}
-            pagination={false}
-            disableArrowsOnEnd={false}
-            showArrows={false}
-          >
-            {activities.map((activity) => (
-              <ActivityListing
-                activity={activity}
-                key={activity.activityId}
-              />
-            ))}
-          </Carousel>
-        </CarouselContainer>
-      </div>
+        </Header>
+        <Carousel
+          ref={(ref) => { this.carousel = ref; }}
+          itemsToShow={4}
+          itemsToScroll={4}
+          pagination={false}
+          disableArrowsOnEnd={false}
+          showArrows={false}
+        >
+          {activities.map((activity) => (
+            <ActivityListing
+              activity={activity}
+              key={activity.activityId}
+            />
+          ))}
+        </Carousel>
+      </Container>
     );
   }
 }

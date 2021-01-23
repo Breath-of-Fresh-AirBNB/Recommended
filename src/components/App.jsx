@@ -11,8 +11,10 @@ const Container = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: center;
-  width: 1128px;
-  margin: auto auto;
+  width: 100%;
+  padding: 0 80px 0 80px;
+  font-family: Montserrat, sans-serif;
+  background-color: #F7F7F7;
 `;
 
 class App extends React.Component {
