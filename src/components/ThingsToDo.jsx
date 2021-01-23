@@ -1,8 +1,7 @@
 /* eslint-disable react/prop-types */
 import React from 'react';
 import styled from 'styled-components';
-import Carousel from 'react-elastic-carousel';
-import ActivityListing from './ActivityListing';
+import ThingsToDoCarousel from './ThingsToDoCarousel';
 
 const Container = styled.div`
   width: 75%;
@@ -73,21 +72,9 @@ class ThingsToDo extends React.Component {
             <button type="button" className="nextBtn" onClick={() => this.carousel.slideNext()}>{next}</button>
           </Buttons>
         </Header>
-        <Carousel
-          ref={(ref) => { this.carousel = ref; }}
-          itemsToShow={6}
-          itemsToScroll={6}
-          pagination={false}
-          disableArrowsOnEnd={false}
-          showArrows={false}
-        >
-          {activities.map((activity) => (
-            <ActivityListing
-              activity={activity}
-              key={activity.activityId}
-            />
-          ))}
-        </Carousel>
+        <ThingsToDoCarousel
+          activities={activities}
+        />
       </Container>
     );
   }

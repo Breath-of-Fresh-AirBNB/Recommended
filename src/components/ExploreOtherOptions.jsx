@@ -36,6 +36,7 @@ const Title = styled.h2`
 const Destinations = styled.div`
   display: flex;
   justify-content: space-between;
+  flex-wrap: wrap;
   margin: 20px 0 0 10px;
   color: grey;
 
