@@ -5,7 +5,6 @@ import Card from '@material-ui/core/Card';
 import CardActionArea from '@material-ui/core/CardActionArea';
 import CardContent from '@material-ui/core/CardContent';
 import CardMedia from '@material-ui/core/CardMedia';
-import Typography from '@material-ui/core/Typography';
 import styled from 'styled-components';
 
 const Listing = styled.div`
@@ -63,13 +62,13 @@ const Rate = styled.div`
 
 const useStyles = makeStyles({
   root: {
-    width: 267,
+    width: 171,
     boxShadow: 'none',
     borderRadius: 10,
     backgroundColor: '#F7F7F7',
   },
   media: {
-    height: 178,
+    height: 228,
     borderRadius: 10,
   },
   content: {
