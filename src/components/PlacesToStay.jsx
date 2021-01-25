@@ -1,7 +1,8 @@
 /* eslint-disable react/prop-types */
 import React from 'react';
 import styled from 'styled-components';
-import PlacesCarousel from './PlacesCarousel';
+import Carousel from 'react-elastic-carousel';
+import HomeListing from './HomeListing';
 
 const Container = styled.div`
   width: 75%;
@@ -58,6 +59,14 @@ class PlacesToStay extends React.Component {
   constructor(props) {
     super(props);
     this.state = {};
+    this.breakPoints = [
+      { width: 1, itemsToShow: 1 },
+      {
+        width: 550, itemsToShow: 2, itemsToScroll: 2, pagination: false,
+      },
+      { width: 850, itemsToShow: 3, itemsToScroll: 3 },
+      { width: 1150, itemsToShow: 4 },
+    ];
   }
 
   render() {
@@ -73,7 +82,22 @@ class PlacesToStay extends React.Component {
             <button type="button" id="nextBtn" onClick={() => this.carousel.slideNext()}>{next}</button>
           </Buttons>
         </Header>
-        <PlacesCarousel homes={homes} />
+        <Carousel
+          ref={(ref) => { this.carousel = ref; }}
+          itemsToShow={4}
+          itemsToScroll={4}
+          pagination={false}
+          disableArrowsOnEnd={false}
+          showArrows={false}
+          breakPoints={this.breakPoints}
+        >
+          {homes.map((home) => (
+            <HomeListing
+              home={home}
+              key={home.homeId}
+            />
+          ))}
+        </Carousel>
       </Container>
     );
   }

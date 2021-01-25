@@ -32,7 +32,7 @@ const Title = styled.h2`
 
 const Destinations = styled.div`
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-start;
   flex-wrap: wrap;
   margin: 20px 0 0 10px;
   color: grey;
@@ -40,6 +40,7 @@ const Destinations = styled.div`
   & .list {
     display: flex;
     flex-direction: column;
+    padding-right: 200px;
   }
 `;
 

@@ -23,9 +23,9 @@
         <div class='clearfix'>
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">63.64% </span>
+                <span class="strong">66.67% </span>
                 <span class="quiet">Statements</span>
-                <span class='fraction'>7/11</span>
+                <span class='fraction'>8/12</span>
             </div>
         
             
@@ -44,9 +44,9 @@
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">63.64% </span>
+                <span class="strong">66.67% </span>
                 <span class="quiet">Lines</span>
-                <span class='fraction'>7/11</span>
+                <span class='fraction'>8/12</span>
             </div>
         
             
@@ -122,7 +122,9 @@
 <a name='L63'></a><a href='#L63'>63</a>
 <a name='L64'></a><a href='#L64'>64</a>
 <a name='L65'></a><a href='#L65'>65</a>
-<a name='L66'></a><a href='#L66'>66</a></td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
+<a name='L66'></a><a href='#L66'>66</a>
+<a name='L67'></a><a href='#L67'>67</a></td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -139,8 +141,6 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">2x</span>
 <span class="cline-any cline-yes">2x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -150,6 +150,8 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2x</span>
 <span class="cline-any cline-yes">2x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
@@ -195,19 +197,19 @@ import ThingsToDo from './ThingsToDo';
 import ExploreOtherOptions from './ExploreOtherOptions';
 import sampleHomes from './sampleHomes';
 import sampleActivities from './sampleActivities';
+import GlobalStyle from './globalStyle';
 &nbsp;
 const Container = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: center;
-  width: 1128px;
-  margin: auto auto;
 `;
 &nbsp;
 class App extends React.Component {
   constructor() {
     super();
     this.state = {
+      id: 4,
       homes: sampleHomes,
       activities: sampleActivities,
       destinations: sampleHomes[0].relatedDestinations,
@@ -215,7 +217,8 @@ class App extends React.Component {
   }
 &nbsp;
   componentDidMount() {
-    axios.get('http://localhost:2222/homes/4')
+    const { id } = this.state;
+    axios.get(`http://localhost:2222/homes/${id}`)
       .then(<span class="fstat-no" title="function not covered" >(h</span>omes) =&gt; {
         const listings = <span class="cstat-no" title="statement not covered" >homes.data.slice(0, 12);</span>
 <span class="cstat-no" title="statement not covered" >        this.setState({</span>
@@ -224,7 +227,7 @@ class App extends React.Component {
       });
     axios.get('http://localhost:2222/activities/4')
       .then(<span class="fstat-no" title="function not covered" >(a</span>ctivities) =&gt; {
-        const activitiesList = <span class="cstat-no" title="statement not covered" >activities.data.slice(0, 12);</span>
+        const activitiesList = <span class="cstat-no" title="statement not covered" >activities.data;</span>
 <span class="cstat-no" title="statement not covered" >        this.setState({</span>
           activities: activitiesList,
         });
@@ -234,19 +237,19 @@ class App extends React.Component {
   render() {
     const { homes, activities, destinations } = this.state;
     return (
-      &lt;div className="recommended"&gt;
-        &lt;Container&gt;
-          &lt;PlacesToStay
-            homes={homes}
-          /&gt;
-          &lt;ThingsToDo
-            activities={activities}
-          /&gt;
-          &lt;ExploreOtherOptions
-            destinations={destinations}
-          /&gt;
-        &lt;/Container&gt;
-      &lt;/div&gt;
+      &lt;Container&gt;
+        &lt;GlobalStyle /&gt;
+        &lt;PlacesToStay
+          homes={homes}
+        /&gt;
+        &lt;ThingsToDo
+          activities={activities}
+        /&gt;
+        &lt;ExploreOtherOptions
+          destination={homes[0].destination}
+          destinations={destinations}
+        /&gt;
+      &lt;/Container&gt;
     );
   }
 }
@@ -259,7 +262,7 @@ export default App;
             <div class='footer quiet pad2 space-top1 center small'>
                 Code coverage generated by
                 <a href="https://istanbul.js.org/" target="_blank">istanbul</a>
-                at Thu Jan 21 2021 20:40:51 GMT-0700 (Mountain Standard Time)
+                at Sat Jan 23 2021 15:32:36 GMT-0700 (Mountain Standard Time)
             </div>
         </div>
         <script src="../../prettify.js"></script>
