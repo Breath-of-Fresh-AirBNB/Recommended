@@ -80,49 +80,51 @@ const ActivityListing = ({ activity }) => {
   const classes = useStyles();
 
   return (
-    <Listing>
-      <Card className={classes.root}>
-        <CardActionArea>
-          <CardMedia
-            className={classes.media}
-            image={activity.imageUrl}
-            title={activity.name}
-          />
-          <CardContent className={classes.content}>
-            <Reviews>
-              <p className="star">
-                ★
-                {' '}
-              </p>
-              <p className="averageRating">
-                {activity.averageRating}
-                {' '}
-              </p>
-              <p className="reviews">
-                {' '}
-                (
-                {activity.reviews}
-                )
-              </p>
-            </Reviews>
-            <Name>
-              <p>
-                {activity.name}
-              </p>
-            </Name>
-            <Rate>
-              <p className="rate">
-                From $
-                {activity.rate}
-              </p>
-              <p>
-                / person
-              </p>
-            </Rate>
-          </CardContent>
-        </CardActionArea>
-      </Card>
-    </Listing>
+    <div className="activityListing">
+      <Listing>
+        <Card className={classes.root}>
+          <CardActionArea>
+            <CardMedia
+              className={classes.media}
+              image={activity.imageUrl}
+              title={activity.name}
+            />
+            <CardContent className={classes.content}>
+              <Reviews>
+                <p className="star">
+                  ★
+                  {' '}
+                </p>
+                <p className="averageRating">
+                  {activity.averageRating}
+                  {' '}
+                </p>
+                <p className="reviews">
+                  {' '}
+                  (
+                  {activity.reviews}
+                  )
+                </p>
+              </Reviews>
+              <Name>
+                <p>
+                  {activity.name}
+                </p>
+              </Name>
+              <Rate>
+                <p className="rate">
+                  From $
+                  {activity.rate}
+                </p>
+                <p>
+                  / person
+                </p>
+              </Rate>
+            </CardContent>
+          </CardActionArea>
+        </Card>
+      </Listing>
+    </div>
   );
 };
 

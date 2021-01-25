@@ -71,33 +71,35 @@ class ThingsToDo extends React.Component {
   render() {
     const { activities } = this.props;
     return (
-      <Container>
-        <Header>
-          <div className="top-bar">
-            <Title>Things to do nearby</Title>
-          </div>
-          <Buttons>
-            <button type="button" className="prevBtn" onClick={() => this.carousel.slidePrev()}>{prev}</button>
-            <button type="button" className="nextBtn" onClick={() => this.carousel.slideNext()}>{next}</button>
-          </Buttons>
-        </Header>
-        <Carousel
-          ref={(ref) => { this.carousel = ref; }}
-          itemsToShow={6}
-          itemsToScroll={6}
-          pagination={false}
-          disableArrowsOnEnd={false}
-          showArrows={false}
-          breakPoints={this.breakPoints}
-        >
-          {activities.map((activity) => (
-            <ActivityListing
-              activity={activity}
-              key={activity.activityId}
-            />
-          ))}
-        </Carousel>
-      </Container>
+      <div className="thingsToDoNearby">
+        <Container>
+          <Header>
+            <div className="top-bar">
+              <Title>Things to do nearby</Title>
+            </div>
+            <Buttons>
+              <button type="button" className="prevBtn" onClick={() => this.carousel.slidePrev()}>{prev}</button>
+              <button type="button" className="nextBtn" onClick={() => this.carousel.slideNext()}>{next}</button>
+            </Buttons>
+          </Header>
+          <Carousel
+            ref={(ref) => { this.carousel = ref; }}
+            itemsToShow={6}
+            itemsToScroll={6}
+            pagination={false}
+            disableArrowsOnEnd={false}
+            showArrows={false}
+            breakPoints={this.breakPoints}
+          >
+            {activities.map((activity) => (
+              <ActivityListing
+                activity={activity}
+                key={activity.activityId}
+              />
+            ))}
+          </Carousel>
+        </Container>
+      </div>
     );
   }
 }

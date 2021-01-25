@@ -1,6 +1,4 @@
-const faker = require('faker');
 const mongoose = require('mongoose');
-// const db = require('./index.js');
 const Home = require('./homeSchema.js');
 const Activity = require('./activitySchema.js');
 

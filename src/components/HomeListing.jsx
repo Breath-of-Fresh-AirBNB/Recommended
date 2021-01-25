@@ -87,60 +87,62 @@ const HomeListing = ({ home }) => {
   const classes = useStyles();
 
   return (
-    <Listing>
-      <Card className={classes.root}>
-        <CardActionArea>
-          <CardMedia
-            className={classes.media}
-            image={home.imageUrl}
-            title={home.name}
-          />
-          <CardContent className={classes.content}>
-            <Reviews>
-              <p className="star">
-                ★
-                {' '}
-              </p>
-              <p className="averageRating">
-                {home.averageRating}
-                {' '}
-              </p>
-              <p className="reviews">
-                {' '}
-                (
-                {home.reviews}
-                )
-              </p>
-            </Reviews>
-            <Accomodations>
-              <p className="accommodationType">
-                {home.accommodationType}
-                {' '}
-                •
-                {' '}
-                {home.beds}
-                {' '}
-                beds
-              </p>
-            </Accomodations>
-            <Name>
-              <p>
-                {home.name}
-              </p>
-            </Name>
-            <Rate>
-              <p className="rate">
-                $
-                {home.rate}
-              </p>
-              <p>
-                / night
-              </p>
-            </Rate>
-          </CardContent>
-        </CardActionArea>
-      </Card>
-    </Listing>
+    <div className="homeListing">
+      <Listing>
+        <Card className={classes.root}>
+          <CardActionArea>
+            <CardMedia
+              className={classes.media}
+              image={home.imageUrl}
+              title={home.name}
+            />
+            <CardContent className={classes.content}>
+              <Reviews>
+                <p className="star">
+                  ★
+                  {' '}
+                </p>
+                <p className="averageRating">
+                  {home.averageRating}
+                  {' '}
+                </p>
+                <p className="reviews">
+                  {' '}
+                  (
+                  {home.reviews}
+                  )
+                </p>
+              </Reviews>
+              <Accomodations>
+                <p className="accommodationType">
+                  {home.accommodationType}
+                  {' '}
+                  •
+                  {' '}
+                  {home.beds}
+                  {' '}
+                  beds
+                </p>
+              </Accomodations>
+              <Name>
+                <p>
+                  {home.name}
+                </p>
+              </Name>
+              <Rate>
+                <p className="rate">
+                  $
+                  {home.rate}
+                </p>
+                <p>
+                  / night
+                </p>
+              </Rate>
+            </CardContent>
+          </CardActionArea>
+        </Card>
+      </Listing>
+    </div>
   );
 };
 

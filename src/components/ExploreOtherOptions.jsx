@@ -51,68 +51,70 @@ const DestinationLink = styled.p`
 `;
 
 const ExploreOtherOptions = ({ destination, destinations }) => (
-  <Container>
-    <Title>
-      Explore other options in and around
-      {' '}
-      {destination}
-    </Title>
-    <div className="subheader">
-      More places to stay in
-      {' '}
-      {destination}
-      :
-    </div>
-    <div className="homeTypeLinks">
-      Houses • Bed and breakfasts • Lofts • Villas • Condominiums
-    </div>
-    <Destinations>
-      <div className="list">
-        <DestinationLink>
-          {destinations[0]}
-        </DestinationLink>
-        <DestinationLink>
-          {destinations[1]}
-        </DestinationLink>
-        <DestinationLink>
-          {destinations[2]}
-        </DestinationLink>
+  <div className="exploreOtherOptions">
+    <Container>
+      <Title>
+        Explore other options in and around
+        {' '}
+        {destination}
+      </Title>
+      <div className="subheader">
+        More places to stay in
+        {' '}
+        {destination}
+        :
       </div>
-      <div className="list">
-        <DestinationLink>
-          {destinations[3]}
-        </DestinationLink>
-        <DestinationLink>
-          {destinations[4]}
-        </DestinationLink>
-        <DestinationLink>
-          {destinations[5]}
-        </DestinationLink>
+      <div className="homeTypeLinks">
+        Houses • Bed and breakfasts • Lofts • Villas • Condominiums
       </div>
-      <div className="list">
-        <DestinationLink>
-          {destinations[6]}
-        </DestinationLink>
-        <DestinationLink>
-          {destinations[7]}
-        </DestinationLink>
-        <DestinationLink>
-          {destinations[8]}
-        </DestinationLink>
-      </div>
-      <div className="list">
-        <DestinationLink>
-          {destinations[9]}
-        </DestinationLink>
-        <DestinationLink>
-          {destinations[10]}
-        </DestinationLink>
-        <DestinationLink>
-          {destinations[11]}
-        </DestinationLink>
-      </div>
-    </Destinations>
-  </Container>
+      <Destinations>
+        <div className="list">
+          <DestinationLink>
+            {destinations[0]}
+          </DestinationLink>
+          <DestinationLink>
+            {destinations[1]}
+          </DestinationLink>
+          <DestinationLink>
+            {destinations[2]}
+          </DestinationLink>
+        </div>
+        <div className="list">
+          <DestinationLink>
+            {destinations[3]}
+          </DestinationLink>
+          <DestinationLink>
+            {destinations[4]}
+          </DestinationLink>
+          <DestinationLink>
+            {destinations[5]}
+          </DestinationLink>
+        </div>
+        <div className="list">
+          <DestinationLink>
+            {destinations[6]}
+          </DestinationLink>
+          <DestinationLink>
+            {destinations[7]}
+          </DestinationLink>
+          <DestinationLink>
+            {destinations[8]}
+          </DestinationLink>
+        </div>
+        <div className="list">
+          <DestinationLink>
+            {destinations[9]}
+          </DestinationLink>
+          <DestinationLink>
+            {destinations[10]}
+          </DestinationLink>
+          <DestinationLink>
+            {destinations[11]}
+          </DestinationLink>
+        </div>
+      </Destinations>
+    </Container>
+  </div>
 );
 
 export default ExploreOtherOptions;

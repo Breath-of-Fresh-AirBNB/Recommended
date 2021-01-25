@@ -72,33 +72,35 @@ class PlacesToStay extends React.Component {
   render() {
     const { homes } = this.props;
     return (
-      <Container>
-        <Header>
-          <div className="top-bar">
-            <Title>More places to stay</Title>
-          </div>
-          <Buttons>
-            <button type="button" id="prevBtn" onClick={() => this.carousel.slidePrev()}>{prev}</button>
-            <button type="button" id="nextBtn" onClick={() => this.carousel.slideNext()}>{next}</button>
-          </Buttons>
-        </Header>
-        <Carousel
-          ref={(ref) => { this.carousel = ref; }}
-          itemsToShow={4}
-          itemsToScroll={4}
-          pagination={false}
-          disableArrowsOnEnd={false}
-          showArrows={false}
-          breakPoints={this.breakPoints}
-        >
-          {homes.map((home) => (
-            <HomeListing
-              home={home}
-              key={home.homeId}
-            />
-          ))}
-        </Carousel>
-      </Container>
+      <div className="morePlacesToStay">
+        <Container>
+          <Header>
+            <div className="top-bar">
+              <Title>More places to stay</Title>
+            </div>
+            <Buttons>
+              <button type="button" id="prevBtn" onClick={() => this.carousel.slidePrev()}>{prev}</button>
+              <button type="button" id="nextBtn" onClick={() => this.carousel.slideNext()}>{next}</button>
+            </Buttons>
+          </Header>
+          <Carousel
+            ref={(ref) => { this.carousel = ref; }}
+            itemsToShow={4}
+            itemsToScroll={4}
+            pagination={false}
+            disableArrowsOnEnd={false}
+            showArrows={false}
+            breakPoints={this.breakPoints}
+          >
+            {homes.map((home) => (
+              <HomeListing
+                home={home}
+                key={home.homeId}
+              />
+            ))}
+          </Carousel>
+        </Container>
+      </div>
     );
   }
 }

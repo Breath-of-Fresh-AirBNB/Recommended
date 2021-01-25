@@ -175,7 +175,9 @@
 <a name='L116'></a><a href='#L116'>116</a>
 <a name='L117'></a><a href='#L117'>117</a>
 <a name='L118'></a><a href='#L118'>118</a>
-<a name='L119'></a><a href='#L119'>119</a></td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
+<a name='L119'></a><a href='#L119'>119</a>
+<a name='L120'></a><a href='#L120'>120</a>
+<a name='L121'></a><a href='#L121'>121</a></td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -229,6 +231,8 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -346,68 +350,70 @@ const DestinationLink = styled.p`
 `;
 &nbsp;
 const ExploreOtherOptions = ({ destination, destinations }) =&gt; (
-  &lt;Container&gt;
-    &lt;Title&gt;
-      Explore other options in and around
-      {' '}
-      {destination}
-    &lt;/Title&gt;
-    &lt;div className="subheader"&gt;
-      More places to stay in
-      {' '}
-      {destination}
-      :
-    &lt;/div&gt;
-    &lt;div className="homeTypeLinks"&gt;
-      Houses • Bed and breakfasts • Lofts • Villas • Condominiums
-    &lt;/div&gt;
-    &lt;Destinations&gt;
-      &lt;div className="list"&gt;
-        &lt;DestinationLink&gt;
-          {destinations[0]}
-        &lt;/DestinationLink&gt;
-        &lt;DestinationLink&gt;
-          {destinations[1]}
-        &lt;/DestinationLink&gt;
-        &lt;DestinationLink&gt;
-          {destinations[2]}
-        &lt;/DestinationLink&gt;
+  &lt;div className="exploreOtherOptions"&gt;
+    &lt;Container&gt;
+      &lt;Title&gt;
+        Explore other options in and around
+        {' '}
+        {destination}
+      &lt;/Title&gt;
+      &lt;div className="subheader"&gt;
+        More places to stay in
+        {' '}
+        {destination}
+        :
       &lt;/div&gt;
-      &lt;div className="list"&gt;
-        &lt;DestinationLink&gt;
-          {destinations[3]}
-        &lt;/DestinationLink&gt;
-        &lt;DestinationLink&gt;
-          {destinations[4]}
-        &lt;/DestinationLink&gt;
-        &lt;DestinationLink&gt;
-          {destinations[5]}
-        &lt;/DestinationLink&gt;
+      &lt;div className="homeTypeLinks"&gt;
+        Houses • Bed and breakfasts • Lofts • Villas • Condominiums
       &lt;/div&gt;
-      &lt;div className="list"&gt;
-        &lt;DestinationLink&gt;
-          {destinations[6]}
-        &lt;/DestinationLink&gt;
-        &lt;DestinationLink&gt;
-          {destinations[7]}
-        &lt;/DestinationLink&gt;
-        &lt;DestinationLink&gt;
-          {destinations[8]}
-        &lt;/DestinationLink&gt;
-      &lt;/div&gt;
-      &lt;div className="list"&gt;
-        &lt;DestinationLink&gt;
-          {destinations[9]}
-        &lt;/DestinationLink&gt;
-        &lt;DestinationLink&gt;
-          {destinations[10]}
-        &lt;/DestinationLink&gt;
-        &lt;DestinationLink&gt;
-          {destinations[11]}
-        &lt;/DestinationLink&gt;
-      &lt;/div&gt;
-    &lt;/Destinations&gt;
-  &lt;/Container&gt;
+      &lt;Destinations&gt;
+        &lt;div className="list"&gt;
+          &lt;DestinationLink&gt;
+            {destinations[0]}
+          &lt;/DestinationLink&gt;
+          &lt;DestinationLink&gt;
+            {destinations[1]}
+          &lt;/DestinationLink&gt;
+          &lt;DestinationLink&gt;
+            {destinations[2]}
+          &lt;/DestinationLink&gt;
+        &lt;/div&gt;
+        &lt;div className="list"&gt;
+          &lt;DestinationLink&gt;
+            {destinations[3]}
+          &lt;/DestinationLink&gt;
+          &lt;DestinationLink&gt;
+            {destinations[4]}
+          &lt;/DestinationLink&gt;
+          &lt;DestinationLink&gt;
+            {destinations[5]}
+          &lt;/DestinationLink&gt;
+        &lt;/div&gt;
+        &lt;div className="list"&gt;
+          &lt;DestinationLink&gt;
+            {destinations[6]}
+          &lt;/DestinationLink&gt;
+          &lt;DestinationLink&gt;
+            {destinations[7]}
+          &lt;/DestinationLink&gt;
+          &lt;DestinationLink&gt;
+            {destinations[8]}
+          &lt;/DestinationLink&gt;
+        &lt;/div&gt;
+        &lt;div className="list"&gt;
+          &lt;DestinationLink&gt;
+            {destinations[9]}
+          &lt;/DestinationLink&gt;
+          &lt;DestinationLink&gt;
+            {destinations[10]}
+          &lt;/DestinationLink&gt;
+          &lt;DestinationLink&gt;
+            {destinations[11]}
+          &lt;/DestinationLink&gt;
+        &lt;/div&gt;
+      &lt;/Destinations&gt;
+    &lt;/Container&gt;
+  &lt;/div&gt;
 );
 &nbsp;
 export default ExploreOtherOptions;
@@ -418,7 +424,7 @@ export default ExploreOtherOptions;
             <div class='footer quiet pad2 space-top1 center small'>
                 Code coverage generated by
                 <a href="https://istanbul.js.org/" target="_blank">istanbul</a>
-                at Sat Jan 23 2021 15:32:36 GMT-0700 (Mountain Standard Time)
+                at Mon Jan 25 2021 08:22:37 GMT-0700 (Mountain Standard Time)
             </div>
         </div>
         <script src="../../prettify.js"></script>

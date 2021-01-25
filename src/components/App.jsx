@@ -46,19 +46,21 @@ class App extends React.Component {
   render() {
     const { homes, activities, destinations } = this.state;
     return (
-      <Container>
-        <GlobalStyle />
-        <PlacesToStay
-          homes={homes}
-        />
-        <ThingsToDo
-          activities={activities}
-        />
-        <ExploreOtherOptions
-          destination={homes[0].destination}
-          destinations={destinations}
-        />
-      </Container>
+      <div className="recommended">
+        <Container>
+          <GlobalStyle />
+          <PlacesToStay
+            homes={homes}
+          />
+          <ThingsToDo
+            activities={activities}
+          />
+          <ExploreOtherOptions
+            destination={homes[0].destination}
+            destinations={destinations}
+          />
+        </Container>
+      </div>
     );
   }
 }
