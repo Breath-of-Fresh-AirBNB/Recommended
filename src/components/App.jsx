@@ -3,44 +3,40 @@ import axios from 'axios';
 import styled from 'styled-components';
 import PlacesToStay from './PlacesToStay';
 import ThingsToDo from './ThingsToDo';
+import ExploreOtherOptions from './ExploreOtherOptions';
 import sampleHomes from './sampleHomes';
 import sampleActivities from './sampleActivities';
+import GlobalStyle from './globalStyle';
 
 const Container = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: center;
-  width: 1128px;
-  margin: auto auto;
 `;
 
 class App extends React.Component {
   constructor() {
     super();
     this.state = {
+      id: 4,
       homes: sampleHomes,
       activities: sampleActivities,
-      // destinations: sampleHomes[0],
+      destinations: sampleHomes[0].relatedDestinations,
     };
   }
 
   componentDidMount() {
-    axios.get('http://localhost:2222/homes/4')
+    const { id } = this.state;
+    axios.get(`http://localhost:2222/homes/${id}`)
       .then((homes) => {
-        const listings = [];
-        for (let i = 0; i <= 11; i += 1) {
-          listings.push(homes.data[i]);
-        }
+        const listings = homes.data.slice(0, 12);
         this.setState({
           homes: listings,
         });
       });
     axios.get('http://localhost:2222/activities/4')
       .then((activities) => {
-        const activitiesList = [];
-        for (let i = 0; i <= 11; i += 1) {
-          activitiesList.push(activities.data[i]);
-        }
+        const activitiesList = activities.data;
         this.setState({
           activities: activitiesList,
         });
@@ -48,16 +44,23 @@ class App extends React.Component {
   }
 
   render() {
-    const { homes, activities } = this.state;
+    const { homes, activities, destinations } = this.state;
     return (
-      <Container>
-        <PlacesToStay
-          homes={homes}
-        />
-        <ThingsToDo
-          activities={activities}
-        />
-      </Container>
+      <div className="recommended">
+        <Container>
+          <GlobalStyle />
+          <PlacesToStay
+            homes={homes}
+          />
+          <ThingsToDo
+            activities={activities}
+          />
+          <ExploreOtherOptions
+            destination={homes[0].destination}
+            destinations={destinations}
+          />
+        </Container>
+      </div>
     );
   }
 }
