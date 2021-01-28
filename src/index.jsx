@@ -12,5 +12,5 @@ ReactDOM.render(
     </Switch>
   </HashRouter>,
 
-  document.getElementById('recommended'),
+  document.getElementById('Paula'),
 );
