@@ -5,8 +5,7 @@ import Carousel from 'react-elastic-carousel';
 import HomeListing from './HomeListing';
 
 const Container = styled.div`
-  width: 75%;
-  padding: 0 100px 0 100px;
+  width: 100%;
   font-family: Montserrat, sans-serif;
   margin: 60px auto 30px auto;
 `;

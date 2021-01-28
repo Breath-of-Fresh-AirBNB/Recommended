@@ -15,6 +15,8 @@ const Container = styled.div`
   flex-direction: column;
   justify-content: center;
   background-color: #F7F7F7;
+  width: 75%;
+  margin: 0 auto;
 `;
 
 class App extends React.Component {
