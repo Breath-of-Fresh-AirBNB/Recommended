@@ -35,9 +35,9 @@ class App extends React.Component {
     this.getHomesAndActivities(id);
   }
 
-  componentDidUpdate() {
+  componentDidUpdate(prevProps) {
     const { id } = this.state;
-    this.getHomesAndActivities(id);
+    if (this.props.location !== prevProps.location) this.getHomesAndActivities(id);
   }
 
   getHomesAndActivities(id) {
