@@ -1,3 +1,4 @@
+/* eslint-disable react/no-array-index-key */
 /* eslint-disable react/prop-types */
 import React from 'react';
 import styled from 'styled-components';
@@ -91,10 +92,10 @@ class ThingsToDo extends React.Component {
             showArrows={false}
             breakPoints={this.breakPoints}
           >
-            {activities.map((activity) => (
+            {activities.map((activity, i) => (
               <ActivityListing
                 activity={activity}
-                key={activity.activityId}
+                key={i}
               />
             ))}
           </Carousel>
