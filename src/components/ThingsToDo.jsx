@@ -6,10 +6,9 @@ import Carousel from 'react-elastic-carousel';
 import ActivityListing from './ActivityListing';
 
 const Container = styled.div`
-  width: 75%;
-  padding: 0 100px 0 100px;
+  width: 100%;
   font-family: Montserrat, sans-serif;
-  margin: 30px auto 10px auto;
+  margin: 60px auto 30px auto;
 `;
 
 const Header = styled.div`
