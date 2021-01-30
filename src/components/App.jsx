@@ -43,14 +43,14 @@ class App extends React.Component {
   }
 
   getHomesAndActivities(id) {
-    axios.get(`http://18.223.235.43homes/${id}`)
+    axios.get(`http://18.223.235.43:3004/homes/${id}`)
       .then((homes) => {
         const listings = homes.data.slice(0, 12);
         this.setState({
           homes: listings,
         });
       });
-    axios.get(`http://18.223.235.43/activities/${id}`)
+    axios.get(`http://18.223.235.43:3004/activities/${id}`)
       .then((activities) => {
         const activitiesList = activities.data;
         this.setState({
