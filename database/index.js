@@ -3,7 +3,7 @@ const mongoose = require('mongoose');
 
 mongoose.Promise = global.Promise;
 
-const mongoUri = 'mongodb://localhost/airbnb';
+const mongoUri = 'mongodb://database/airbnb';
 
 const db = mongoose.connect(mongoUri, { useNewUrlParser: true, useUnifiedTopology: true })
   .then(() => console.log('Connected to Mongo'))
