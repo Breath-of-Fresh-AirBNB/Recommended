@@ -7,6 +7,7 @@ const Container = styled.div`
   padding: 50px 0 0 0;
   margin: 60px auto 20px auto;
   border-top: 1px solid #DDDDDD;
+  font-family: Montserrat, sans-serif;
 
   & .subheader {
     margin-left: 10px;
