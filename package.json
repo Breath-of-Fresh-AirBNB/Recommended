@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "jest --collectCoverage --detectOpenHandles",
-    "start": "nodemon --exec babel-node server --ignore dist/",
+    "start": "node database/seed.js && node server/index.js",
     "build": "webpack -w",
     "seed": "node database/seed.js",
     "lint": "./node_modules/.bin/eslint . --ignore-path ./.eslintignore"
