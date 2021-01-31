@@ -1,4 +1,5 @@
 const express = require('express');
+const gzipStatic = require('connect-gzip-static');
 const cors = require('cors');
 
 const bodyParser = require('body-parser');
@@ -8,7 +9,7 @@ const Activity = require('../database/activitySchema.js');
 const app = express();
 
 app.use(cors());
-app.use(express.static('dist'));
+app.use(gzipStatic('dist'));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 
