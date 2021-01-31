@@ -18,7 +18,7 @@ app.get('/homes/:id', (req, res) => {
     .then((home) => {
       Home.find({ destination: home[0].destination })
         .then((homes) => {
-          res.setHeader('Cache-Control', 'public, max-age=31557600')
+          res.setHeader('Cache-Control', 'public, max-age=31557600');
           res.status(200).send(homes);
         })
         .catch((err) => {
@@ -35,7 +35,7 @@ app.get('/activities/:id', (req, res) => {
     .then((home) => {
       Activity.find({ destination: home[0].destination })
         .then((activities) => {
-          res.setHeader('Cache-Control', 'public, max-age=31557600')
+          res.setHeader('Cache-Control', 'public, max-age=31557600');
           res.status(200).send(activities);
         })
         .catch((err) => {
