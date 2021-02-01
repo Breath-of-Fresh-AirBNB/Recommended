@@ -12,9 +12,8 @@ app.use(express.static('dist'));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 
-app.use((req, res, next) => {
+app.use((req, res) => {
   res.setHeader('Cache-Control', 'public, max-age=31557600');
-  next();
 });
 
 app.get('/homes/:id', (req, res) => {
