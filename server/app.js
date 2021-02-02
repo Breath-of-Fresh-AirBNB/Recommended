@@ -12,6 +12,10 @@ app.use(express.static('dist'));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 
+app.use((req, res) => {
+  res.setHeader('Cache-Control', 'public, max-age=31557600');
+});
+
 app.get('/homes/:id', (req, res) => {
   Home.find({ homeId: req.params.id })
     .then((home) => {
